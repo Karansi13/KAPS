@@ -10,6 +10,7 @@ export async function binanceChain(): Promise<void> {
       method: "wallet_switchEthereumChain",
       params: [{ chainId: "0x38" }],
     });
+    
   } catch (error) {
     const providerRpcError = error as ProviderRpcError;
     if (providerRpcError.code === 4902) {

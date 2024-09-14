@@ -40,5 +40,3 @@ export const DIDProvider = ({ children }: any) => {
   };
   
   export const useDID = () => useContext(DIDContext);
-  
-  
