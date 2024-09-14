@@ -1,0 +1,12 @@
+type="submit"
+          onSubmit={register}
+
+
+body > iframe {
+	display: none;
+  }
+
+  This doesn't help versions "react": "^18.2.0"   "react-router-dom": "^6.13.0"
+And also I found error in homepage line "homepage": "https://Xardesso.github.io/DAPP-identity-management",Error :
+
+    `Problems loading reference 'vscode://schemas/settings/configurationDefaults': Unable to load schema from 'vscode://schemas/settings/configurationDefaults': cannot open vscode://schemas/settings/configurationDefaults. Detail: Unable to resolve text model content for resource vscode://schemas/settings/configurationDefaults.`
