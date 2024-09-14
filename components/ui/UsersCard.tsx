@@ -30,7 +30,7 @@ const UsersCard: FC<UsersCardType> = ({ user, index }) => {
   };
 
   return (
-    <div className="max-w-sm bg-gray-100 rounded-lg shadow-md p-5 dark:text-white dark:bg-black mx-2 my-2">
+    <div className="max-w-sm bg-gray-100 h-[30vh] rounded-lg shadow-md p-5 dark:text-white dark:bg-black mx-2 my-2">
       <div className="flex justify-end">
         <BsFillPersonPlusFill
           size={20}
@@ -38,11 +38,11 @@ const UsersCard: FC<UsersCardType> = ({ user, index }) => {
           onClick={handleToggleModal}
         />
       </div>
-      <div className="flex flex-col p-3 pt-3 items-center justify-center">
+      <div className="flex flex-col p-3 pt-7 items-center justify-center">
         <Avatar id={index} />
-        <h3>{getUserName(user.name)}</h3>
+        <h3 className="font-extrabold text-[1.25rem] text-gray-300">{getUserName(user.name)}</h3>
         <div className="pt-3">
-          <p className="box-border md:text-sm text-[10px]">
+          <p className="box-border md:text-sm text-[10px] text-violet-300">
             {user.accountAddress}
           </p>
         </div>
