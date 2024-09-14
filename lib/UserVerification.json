@@ -1,0 +1,29 @@
+{
+    "user": {
+      "id": "f8e9b7d1-731a-42fb-93bc-0e329e1a59c4",
+      "name": "Alex Johnson",
+      "email": "alex.johnson@example.com",
+      "phone": "+1-555-432-7890",
+      "walletAddress": "0x7e57D006B9034a1DAb2878b38B1b41F86529D9E1",
+      "verificationStatus": {
+        "isVerified": false,
+        "verificationDate": null,
+        "verificationMethod": "KYC"
+      },
+      "address": {
+        "street": "1234 Elm Street",
+        "city": "Springfield",
+        "state": "IL",
+        "zipCode": "62704",
+        "country": "USA"
+      },
+      "createdAt": "2024-09-14T10:25:45Z",
+      "lastLogin": "2024-09-14T12:45:00Z",
+      "metadata": {
+        "loginAttempts": 3,
+        "device": "iPhone 14",
+        "browser": "Safari"
+      }
+    }
+  }
+  
