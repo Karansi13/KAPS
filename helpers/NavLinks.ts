@@ -6,10 +6,10 @@ interface NavItems {
 }
 
 export const navLinks: NavItems[] = [
-  // {
-  //   label: "Home",
-  //   page: "/",
-  // },
+  {
+    label: "Home",
+    page: "/",
+  },
   {
     label: "Users",
     page: "users",
@@ -18,8 +18,8 @@ export const navLinks: NavItems[] = [
     label: "Chat",
     page: "chat",
   },
-  // {
-  //   label: "Tutorials",
-  //   page: "tutorials",
-  // },
+  {
+    label: "About",
+    page: "about",
+  },
 ];

@@ -14,27 +14,20 @@ import AccountModal from "@/components/ui/AccountModal";
 
 const Dashboard = () => {
   const [openModal, setOpenModal] = useState<boolean>(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
     <>
-      <div className="home min-h-screen flex flex-col md:flex-row justify-center items-center md:space-y-12 md:space-x-[12] mt-20 md:mt-10">
-        {/* <div className="flex flex-col gap-4 mb-10 mx-5 md:mr-10">
-          <Heading className="text-white text-5xl dark:text-white">
-            Multi-chain <br /> decentralized <br /> messaging
-          </Heading>
-          <Paragraph className="max-w-md md:text-left text-gray-200">
-            Message anyone from the blockchain anonymously.{" "}
-            <span className="font-bold text-light-gold">DappChat</span> is a
-            decentralized protocol that allows wallet-to-wallet messaging
-            powered by multi-chain interoperability.{" "}
-          </Paragraph>
-          <button
-            onClick={() => setOpenModal((prev) => !prev)}
-            className="rounded-xl w-1/2 md:self-start self-center text-white font-bold p-3 bg-teal-600 dark:bg-blue-600 hover:scale-105"
-          >
-            CREATE ACCOUNT
-          </button>
-        </div> */}
+      <div className="home min-h-screen flex flex-col md:flex-row justify-center md:space-y-12 md:space-x-[12] mt-20 md:mt-2">
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="text-[190px] font-bold">X<span className="bg-gradient-to-r from-purple-600 via-violet-500 to-indigo-600  text-transparent bg-clip-text">-KAPS</span></h1>
+        <div className="overflow-hidden">
+        <p className="text-2xl font-bold hover:text-amber-100" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>Your Decentralised-Messaging Application</p>
+        <div className={` ${isHovered ? "w-full" : "w-0.5"} transition-all duration-300 ease-in-out h-0.5 bg-gradient-to-r from-purple-600 via-violet-500 to-indigo-600`}></div>
+        </div>
+        <button className="mt-20 bg-purple-600 py-4 px-6 rounded-3xl hover:bg-purple-800" onClick={() => setOpenModal(true)}>Get Started</button>
+        
+      </div>
 
         {openModal && <AccountModal setOpenModal={setOpenModal} />}
 

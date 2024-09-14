@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-
 import Heading from "@/components/common/Heading";
 import Button from "@/components/common/Button";
 import NetworkModal from "@/components/ui/NetworkModal";
@@ -14,7 +13,7 @@ import { useChatContext } from "@/context/KAPS.context";
 import { navLinks } from "@/helpers/NavLinks";
 import { getCurrentChain } from "@/lib/Api";
 
-import AnonymousIcon from "@/public/assets/newlogo1.jpg";
+import AnonymousIcon from "@/public/assets/anonymous.png";
 
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -54,29 +53,29 @@ const Navbar = () => {
       <div className="flex items-center justify-between pr-3 md:pr-0 py-3 md:py-5">
         <Link href="/">
           <div className="flex items-center space-x-2 cursor-pointer">
-            <Image
+            {/* <Image
               src={AnonymousIcon}
               className="rounded-full"
               alt="icon"
               height={50}
               width={50}
-            />
+            /> */}
             <div className="hidden md:block">
               <Heading
                 size="sm"
                 className="text-2xl text-black dark:text-white"
               >
-                KAPS
+                X<span className="text-purple-500">-KAPS</span>
               </Heading>
             </div>
           </div>
         </Link>
-        <div className="hidden md:flex items-center justify-center space-x-6 flex-grow font-bold">
+        <div className="hidden md:flex items-center justify-center space-x-10 flex-grow ">
           {navLinks.map((item, index) => (
             <Link
               key={index}
               href={item.page}
-              className="text-black cursor-pointer hover:-translate-y-1 transition-transform dark:text-neutral-100"
+              className="text-black text-xl cursor-pointer hover:bg-purple-500 py-2 px-4 rounded-xl transition-transform dark:text-neutral-100"
               onClick={() => setNavbar(false)}
             >
               {item.label}
@@ -86,12 +85,12 @@ const Navbar = () => {
         <div className="flex flex-row space-x-2 text-[10px] md:text-lg">
           <Button
             onClick={handleOpenModal}
-            className="rounded-xl text-white border font-bold p-3 bg-teal-600 dark:bg-slate-700 border-none block hover:scale-105"
+            className="rounded-xl text-black border font-bold py-3 w-32 bg-teal-600 dark:bg-white border-none block hover:scale-105"
             label={currentChain ? currentChain : "Set Network"}
           />
           <Button
             onClick={() => connectWallet()}
-            className="rounded-xl text-white button border font-bold p-3 bg-teal-600 dark:bg-blue-700 border-none block hover:scale-105"
+            className="rounded-xl text-white border font-bold p-3 w-32 bg-teal-600 dark:bg-purple-500 border-none block hover:scale-105"
             label={
               account ? (
                 account.slice(0, 5) + ".."
